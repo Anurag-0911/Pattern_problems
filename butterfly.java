@@ -1,0 +1,37 @@
+package Pattern;
+
+import java.util.Scanner;
+
+public class butterfly {
+
+    public static void main(String[] args) {
+        int i, j;
+        System.out.println("Enter max number of row");
+        Scanner sc = new Scanner(System.in);
+        int row = sc.nextInt();
+        for (i = 1; i <= row; i++) {
+            for (j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            for (j = 1; j <= 2 * (row - i); j++) {
+                System.out.print(" ");
+            }
+            for (j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+            for (i = row; i >= 1 ; i--) {
+                for (j = 1; j <= i; j++) {
+                    System.out.print("*");
+                }
+                for (j = 1; j <= 2*(row - i); j++) {
+                    System.out.print(" ");
+                }
+                for (j = 1; j <= i; j++) {
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+    }
+}
