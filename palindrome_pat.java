@@ -1,0 +1,25 @@
+package Pattern;
+
+import java.util.Scanner;
+
+public class palindrome_pat {
+
+        public static void main(String[] args) {
+            int i, j;
+            System.out.println("Enter max number of row");
+            Scanner sc = new Scanner(System.in);
+            int row = sc.nextInt();
+            for( i=1; i<=row; i++) {
+                for(j=1; j<=row-i; j++) {
+                    System.out.print(" ");
+                }
+                for(j=i; j>=1; j--) {
+                    System.out.print(j);
+                }
+                for (j = 2;j <= i;j++){
+                    System.out.print(j);
+                }
+                System.out.println();
+            }
+        }
+    }
